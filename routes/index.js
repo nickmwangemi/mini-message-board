@@ -19,7 +19,7 @@ router.get('/', function (req, res, next) {
 })
 
 router.get('/new', (req, res) => {
-	res.render('form')
+	res.render('form', { title: 'Mini Messageboard', messages: messages })
 })
 
 router.post('/new', (req, res) => {
@@ -34,6 +34,7 @@ router.post('/new', (req, res) => {
 	})
 
 	console.log(messages)
+
 	res.redirect('/')
 })
 module.exports = router

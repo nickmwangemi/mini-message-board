@@ -32,22 +32,39 @@
 		>
 			<p class="h5 my-0 me-md-auto fw-normal"><%= title %></p>
 			<nav class="my-2 my-md-0 me-md-3">
-				<a href="/new" class="btn btn-primary">Create Message</a>
+				<a href="/" class="btn btn-primary">View Messages</a>
 			</nav>
 		</header>
 
 		<main class="container">
 			<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-				<h1 class="display-4"><%= title %></h1>
-				<p class="lead">Welcome to <%= title %></p>
+				<h1 class="display-4">Create New Message</h1>
+				<p class="lead">Let your voice be heard</p>
 
-				<h1>Create New Message</h1>
 				<form method="POST" action="/new">
-					<label for="name">Enter your name</label>
-					<input type="text" name="messageUser" />
-					<label for="name">Enter your message</label>
-					<input type="text" name="messageText" />
-					<button type="submit">Submit</button>
+					<div class="form-group">
+						<label for="name">Name</label>
+						<input
+							type="text"
+							class="form-control"
+							id="exampleFormControlInput1"
+							placeholder="Enter your name.."
+							name="messageUser"
+						/>
+					</div>
+
+					<div class="form-group">
+						<label for="message">Message </label>
+						<textarea
+							class="form-control"
+							id="exampleFormControlTextarea1"
+							rows="3"
+							name="messageText"
+							placeholder="Enter your super awesome message.."
+						></textarea>
+					</div>
+					<br />
+					<button type="submit" class="btn btn-primary">Post Message</button>
 				</form>
 			</div>
 		</main>

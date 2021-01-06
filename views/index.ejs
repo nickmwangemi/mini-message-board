@@ -40,7 +40,28 @@
 			<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
 				<h1 class="display-4"><%= title %></h1>
 				<p class="lead">Welcome to <%= title %></p>
-			</div>
+      </div>
+
+     
+      <% messages.map((message)=>{ %>
+			<div class="card-columns">
+				<div class="card p-3">
+					<blockquote class="blockquote mb-0 card-body">
+           
+						<p>
+              <%= message.text %>
+						</p>
+						<footer class="blockquote-footer">
+							<small class="text-muted">
+								<%= message.user %> on <cite title="Source Title"><%= message.added %></cite>
+							</small>
+						</footer>
+					</blockquote>
+				</div>
+				</div>
+      </div>
+      <% }) %>
+      
 		</main>
 	</body>
 </html>
